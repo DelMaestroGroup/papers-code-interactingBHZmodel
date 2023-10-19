@@ -37,6 +37,11 @@ This work was supported by the U. S. Department of Energy, Office of Science, Of
 
 ### Figures
 
+<object width="400" height="500" type="application/pdf" data="https://github.com/DelMaestroGroup/papers-interactingBHZmodel/blob/main/plots_and_scripts/Non-Interacting_Plots/Combine_plot_Em_and_ni_for_A0p3_B0p5_Nx4_at_U0.pdf?#zoom=85&scrollbar=0&toolbar=0&navpanes=0">
+    <p>Insert your error message here, if the PDF cannot be displayed.</p>
+</object>
+
+
 #### Figure 1: Topological Phase Transition at $U=0$
 <img src="https://github.com/DelMaestroGroup/papers-interactingBHZmodel/blob/main/plots_and_scripts/Non-Interacting_Plots/Combine_plot_Em_and_ni_for_A0p3_B0p5_Nx4_at_U0.pdf?raw=true" width="450px">
 
