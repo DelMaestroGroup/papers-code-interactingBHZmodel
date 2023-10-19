@@ -33,6 +33,40 @@ To generate input file, go to the input_files folder and run the following comma
 2. The data for the non-interacting BHZ model was generated via exact diagonalization. The details of this code is provided in the "ED-code" folder of this repository.
 
 ### Support
+This work was supported by the U. S. Department of Energy, Office of Science, Office of Basic Energy Sciences,under Award No. DE-SC0022311.
 
 ### Figures
+
+#### Figure 1: Topological Phase Transition at $U=0$
+<img src="https://github.com/DelMaestroGroup/papers-interactingBHZmodel/blob/main/plots_and_scripts/Non-Interacting_Plots/Combine_plot_Em_and_ni_for_A0p3_B0p5_Nx4_at_U0.pdf" width="450px">
+
+#### Figure 2: Magnetic Properties at $m=3.0$
+<img src="https://github.com/DelMaestroGroup/papers-interactingBHZmodel/blob/main/plots_and_scripts/Interaction_Plots/Combined_observe_plots_vs_U_for_4x4_System_at_A0p3_B0p5_m3p0.pdf" width="400px">
+
+
+#### Figure 3: Magnetic Properties at $m=1.75$
+<img src="https://github.com/DelMaestroGroup/papers-interactingBHZmodel/blob/main/plots_and_scripts/Interaction_Plots/Combined_observe_plots_vs_U_for_4x4_System_at_A0p3_B0p5_m1p75.pdf" width="400px">
+
+
+#### Figure 4: Topological Properties at $m=3.0$
+<img src="https://github.com/DelMaestroGroup/papers-interactingBHZmodel/blob/main/plots_and_scripts/Interaction_Plots/Combined_topological_plots_for_4x4_System_at_A0p3_B0p5_m3p0.pdf" width="400px">
+
+
+#### Figure 5: Topological Properties at $m=1.75$
+<img src="https://github.com/DelMaestroGroup/papers-interactingBHZmodel/blob/main/plots_and_scripts/Interaction_Plots/Combined_topological_plots_for_4x4_System_at_A0p3_B0p5_m1p75.pdf" width="400px">
+
+
+#### Figure 6: Topological and Magnetic phase diagram using DMRG
+<img src="https://github.com/DelMaestroGroup/papers-interactingBHZmodel/tree/main/plots_and_scripts/Phase_Diagram_Plot/Magnetic_phase_diagram_Nx4_BHZ.pdf" width="400px">
+
+
+#### Appendix Figure 1: Single Site Picture
+<img src="https://github.com/DelMaestroGroup/papers-interactingBHZmodel/blob/main/plots_and_scripts/Appendix_Plots/Single_site_eigens_vs_U.pdf" width="300px">
+
+
+#### Appendix Figure 2: Finite Size Scaling-A
+<img src="https://github.com/DelMaestroGroup/papers-interactingBHZmodel/blob/main/plots_and_scripts/Appendix_Plots/ni_finite_size_scaling_at_U1p0.pdf" width="400px">
+
+#### Appendix Figure 3: Finite Size Scaling-B
+<img src="https://github.com/DelMaestroGroup/papers-interactingBHZmodel/blob/main/plots_and_scripts/Appendix_Plots/Finite_size_scaling_at_m1p75.pdf" width="400px">
 
