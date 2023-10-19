@@ -1,0 +1,182 @@
+% GNUPLOT: LaTeX picture with Postscript
+\documentclass{minimal}
+% Set font size
+\makeatletter
+\def\@ptsize{-2}
+\InputIfFileExists{size8.clo}{}{%
+   \GenericError{(gnuplot) \space\space\space\@spaces}{%
+      Gnuplot Error: File `size8.clo' not found! Could not set font size%
+   }{See the gnuplot documentation for explanation.%
+   }{For using a font size a file `size<fontsize>.clo' has to exist.
+        Falling back ^^Jto default fontsize 10pt.}%
+  \def\@ptsize{0}
+  \input{size10.clo}%
+}%
+\makeatother
+% Load packages
+\usepackage{calc}
+\usepackage{graphicx}
+\usepackage{color}
+\makeatletter
+% Select an appropriate default driver (from TeXLive graphics.cfg)
+\begingroup
+  \chardef\x=0 %
+  % check pdfTeX
+  \@ifundefined{pdfoutput}{}{%
+    \ifcase\pdfoutput
+    \else
+      \chardef\x=1 %
+    \fi
+  }%
+  % check VTeX
+  \@ifundefined{OpMode}{}{%
+    \chardef\x=2 %
+  }%
+\expandafter\endgroup
+\ifcase\x
+  % default case
+  \PassOptionsToPackage{dvips}{geometry}
+\or
+  % pdfTeX is running in pdf mode
+  \PassOptionsToPackage{pdftex}{geometry}
+\else
+  % VTeX is running
+  \PassOptionsToPackage{vtex}{geometry}
+\fi
+\makeatother
+% Set papersize
+\usepackage[papersize={216.00bp,151.20bp},text={216.00bp,151.20bp}]{geometry}
+% No page numbers and no paragraph indentation
+\pagestyle{empty}
+\setlength{\parindent}{0bp}%
+% Load configuration file
+\InputIfFileExists{gnuplot.cfg}{%
+  \typeout{Using configuration file gnuplot.cfg}%
+}{%
+ \typeout{No configuration file gnuplot.cfg found.}%
+}%
+%
+\begin{document}
+\begingroup
+  \makeatletter
+  \providecommand\color[2][]{%
+    \GenericError{(gnuplot) \space\space\space\@spaces}{%
+      Package color not loaded in conjunction with
+      terminal option `colourtext'%
+    }{See the gnuplot documentation for explanation.%
+    }{Either use 'blacktext' in gnuplot or load the package
+      color.sty in LaTeX.}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\includegraphics[2][]{%
+    \GenericError{(gnuplot) \space\space\space\@spaces}{%
+      Package graphicx or graphics not loaded%
+    }{See the gnuplot documentation for explanation.%
+    }{The gnuplot epslatex terminal needs graphicx.sty or graphics.sty.}%
+    \renewcommand\includegraphics[2][]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \@ifundefined{ifGPcolor}{%
+    \newif\ifGPcolor
+    \GPcolortrue
+  }{}%
+  \@ifundefined{ifGPblacktext}{%
+    \newif\ifGPblacktext
+    \GPblacktextfalse
+  }{}%
+  % define a \g@addto@macro without @ in the name:
+  \let\gplgaddtomacro\g@addto@macro
+  % define empty templates for all commands taking text:
+  \gdef\gplbacktext{}%
+  \gdef\gplfronttext{}%
+  \makeatother
+  \ifGPblacktext
+    % no textcolor at all
+    \def\colorrgb#1{}%
+    \def\colorgray#1{}%
+  \else
+    % gray or color?
+    \ifGPcolor
+      \def\colorrgb#1{\color[rgb]{#1}}%
+      \def\colorgray#1{\color[gray]{#1}}%
+      \expandafter\def\csname LTw\endcsname{\color{white}}%
+      \expandafter\def\csname LTb\endcsname{\color{black}}%
+      \expandafter\def\csname LTa\endcsname{\color{black}}%
+      \expandafter\def\csname LT0\endcsname{\color[rgb]{1,0,0}}%
+      \expandafter\def\csname LT1\endcsname{\color[rgb]{0,1,0}}%
+      \expandafter\def\csname LT2\endcsname{\color[rgb]{0,0,1}}%
+      \expandafter\def\csname LT3\endcsname{\color[rgb]{1,0,1}}%
+      \expandafter\def\csname LT4\endcsname{\color[rgb]{0,1,1}}%
+      \expandafter\def\csname LT5\endcsname{\color[rgb]{1,1,0}}%
+      \expandafter\def\csname LT6\endcsname{\color[rgb]{0,0,0}}%
+      \expandafter\def\csname LT7\endcsname{\color[rgb]{1,0.3,0}}%
+      \expandafter\def\csname LT8\endcsname{\color[rgb]{0.5,0.5,0.5}}%
+    \else
+      % gray
+      \def\colorrgb#1{\color{black}}%
+      \def\colorgray#1{\color[gray]{#1}}%
+      \expandafter\def\csname LTw\endcsname{\color{white}}%
+      \expandafter\def\csname LTb\endcsname{\color{black}}%
+      \expandafter\def\csname LTa\endcsname{\color{black}}%
+      \expandafter\def\csname LT0\endcsname{\color{black}}%
+      \expandafter\def\csname LT1\endcsname{\color{black}}%
+      \expandafter\def\csname LT2\endcsname{\color{black}}%
+      \expandafter\def\csname LT3\endcsname{\color{black}}%
+      \expandafter\def\csname LT4\endcsname{\color{black}}%
+      \expandafter\def\csname LT5\endcsname{\color{black}}%
+      \expandafter\def\csname LT6\endcsname{\color{black}}%
+      \expandafter\def\csname LT7\endcsname{\color{black}}%
+      \expandafter\def\csname LT8\endcsname{\color{black}}%
+    \fi
+  \fi
+    \setlength{\unitlength}{0.0500bp}%
+    \ifx\gptboxheight\undefined%
+      \newlength{\gptboxheight}%
+      \newlength{\gptboxwidth}%
+      \newsavebox{\gptboxtext}%
+    \fi%
+    \setlength{\fboxrule}{0.5pt}%
+    \setlength{\fboxsep}{1pt}%
+\begin{picture}(4320.00,3024.00)%
+    \gplgaddtomacro\gplbacktext{%
+      \csname LTb\endcsname%%
+      \put(535,453){\makebox(0,0)[r]{\strut{}\fontsize{8}{8} \selectfont$-0.12$}}%
+      \put(535,763){\makebox(0,0)[r]{\strut{}\fontsize{8}{8} \selectfont$-0.09$}}%
+      \put(535,1073){\makebox(0,0)[r]{\strut{}\fontsize{8}{8} \selectfont$-0.06$}}%
+      \put(535,1383){\makebox(0,0)[r]{\strut{}\fontsize{8}{8} \selectfont$-0.03$}}%
+      \put(535,1693){\makebox(0,0)[r]{\strut{}\fontsize{8}{8} \selectfont$0.00$}}%
+      \put(535,2002){\makebox(0,0)[r]{\strut{}\fontsize{8}{8} \selectfont$0.03$}}%
+      \put(535,2312){\makebox(0,0)[r]{\strut{}\fontsize{8}{8} \selectfont$0.06$}}%
+      \put(535,2622){\makebox(0,0)[r]{\strut{}\fontsize{8}{8} \selectfont$0.09$}}%
+      \put(535,2932){\makebox(0,0)[r]{\strut{}\fontsize{8}{8} \selectfont$0.12$}}%
+      \put(583,293){\makebox(0,0){\strut{}\fontsize{8}{8} \selectfont$0$}}%
+      \put(1485,293){\makebox(0,0){\strut{}\fontsize{8}{8} \selectfont$4$}}%
+      \put(2386,293){\makebox(0,0){\strut{}\fontsize{8}{8} \selectfont$8$}}%
+      \put(3288,293){\makebox(0,0){\strut{}\fontsize{8}{8} \selectfont$12$}}%
+      \put(4189,293){\makebox(0,0){\strut{}\fontsize{8}{8} \selectfont$16$}}%
+      \csname LTb\endcsname%%
+      \put(1935,2725){\makebox(0,0)[l]{\strut{}\fontsize{8}{8}\selectfont$m=1.75$}}%
+    }%
+    \gplgaddtomacro\gplfronttext{%
+      \csname LTb\endcsname%%
+      \put(104,1692){\rotatebox{-270}{\makebox(0,0){\strut{}\fontsize{8}{8} $\langle \tilde{n}_{i,\alpha}\rangle$}}}%
+      \put(2386,117){\makebox(0,0){\strut{}\fontsize{8}{8}\selectfont$i=r_y+L_y*r_x$}}%
+      \csname LTb\endcsname%%
+      \put(2719,1406){\makebox(0,0)[r]{\strut{}\fontsize{8}{8}\selectfont $\alpha=s,~U=1.0$}}%
+      \csname LTb\endcsname%%
+      \put(2719,1246){\makebox(0,0)[r]{\strut{}\fontsize{8}{8}\selectfont $\alpha=p,~U=1.0$}}%
+      \csname LTb\endcsname%%
+      \put(2719,1086){\makebox(0,0)[r]{\strut{}\fontsize{8}{8}\selectfont $\alpha=s,~U=5.25$}}%
+      \csname LTb\endcsname%%
+      \put(2719,926){\makebox(0,0)[r]{\strut{}\fontsize{8}{8}\selectfont $\alpha=p,~U=5.25$}}%
+      \csname LTb\endcsname%%
+      \put(2719,766){\makebox(0,0)[r]{\strut{}\fontsize{8}{8}\selectfont $\alpha=s,~U=10.0$}}%
+      \csname LTb\endcsname%%
+      \put(2719,606){\makebox(0,0)[r]{\strut{}\fontsize{8}{8}\selectfont $\alpha=p,~U=10.0$}}%
+    }%
+    \gplbacktext
+    \put(0,0){\includegraphics{ni_for_m1p75_4x4-inc}}%
+    \gplfronttext
+  \end{picture}%
+\endgroup
+\end{document}

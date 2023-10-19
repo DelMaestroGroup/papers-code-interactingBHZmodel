@@ -1,0 +1,2 @@
+#HubbU    S2_tot_edge     S2_tot_bulk
+5.0  1.15806      1.02894

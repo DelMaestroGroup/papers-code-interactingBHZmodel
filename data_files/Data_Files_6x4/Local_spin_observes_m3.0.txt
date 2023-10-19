@@ -1,0 +1,2 @@
+#HubbU	Local_S2_orb0	Local_S2_orb1	Total_S2
+1.0	0.00467067	0.00467067	0.00934433
