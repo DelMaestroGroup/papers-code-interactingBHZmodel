@@ -38,7 +38,7 @@ This work was supported by the U. S. Department of Energy, Office of Science, Of
 ### Figures
 
 #### Figure 1: Topological Phase Transition at $U=0$
-![alt text](<img src="https://github.com/DelMaestroGroup/papers-interactingBHZmodel/blob/main/plots_and_scripts/Non-Interacting_Plots/Combine_plot_Em_and_ni_for_A0p3_B0p5_Nx4_at_U0.pdf?raw=true" width="450px">)
+<img src="https://github.com/DelMaestroGroup/papers-interactingBHZmodel/blob/main/plots_and_scripts/Non-Interacting_Plots/Combine_plot_Em_and_ni_for_A0p3_B0p5_Nx4_at_U0.pdf?raw=true" width="450px">
 
 #### Figure 2: Magnetic Properties at $m=3.0$
 <img src="https://github.com/DelMaestroGroup/papers-interactingBHZmodel/blob/main/plots_and_scripts/Interaction_Plots/Combined_observe_plots_vs_U_for_4x4_System_at_A0p3_B0p5_m3p0.pdf" width="400px">
