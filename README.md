@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/671278961.svg)](https://zenodo.org/doi/10.5281/zenodo.10044785)
+
 # Topological and magnetic properties of the interacting Bernevig-Hughes-Zhang model
 
 Rahul Soni, Harini Radhakrishnan, Bernd Rosenow, Gonzalo Alvarez, and Adrian Del Maestro
