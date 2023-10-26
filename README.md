@@ -12,7 +12,9 @@ This repository includes data files, scripts, codes and analysis used to generat
 ### Requirements
 The data in this project is generated using two different methods:
 1. The data for the interacting BHZ model was generated via DMRG++ software developed by Dr. Gonzalo Alvarez. Here we provide detailed instructions on how to reproduce the DMRG results used in the main text. The results reported in this work were obtained with the DMRG++ version 6.05 and PsimagLite version 3.04. The documentation for the same is provided [here](https://github.com/g1257/dmrgpp), for compilation follow the steps below:
-* Dependencies include the [BOOST](https://www.boost.org/), [HDF5](https://docs.hdfgroup.org/archive/support/HDF5/doc1.8/cpplus_RM/index.html) and [OpenBLAS](https://www.openblas.net/) libraries
+2. Dependencies include the [BOOST](https://www.boost.org/), [HDF5](https://docs.hdfgroup.org/archive/support/HDF5/doc1.8/cpplus_RM/index.html) and [OpenBLAS](https://www.openblas.net/) libraries
+
+#### Obtaining the Code and Compilation
 
 ```bash
 git clone https://code.ornl.gov/gonzalo_3/PsimagLite.git
@@ -26,6 +28,7 @@ perl configure.pl
 make
 ```
 
+#### Running the Code
 This will generate `dmrg` and `observe` executables. Run the dmrg executable first to save the ground state and then use the observe executable to evaluate all the necessary observables. See the steps below:
 
 ```bash
