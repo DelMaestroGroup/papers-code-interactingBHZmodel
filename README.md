@@ -69,7 +69,7 @@ This work was supported by the U. S. Department of Energy, Office of Science, Of
 
 
 #### Figure 8: Topological and Magnetic phase diagram using DMRG
-<img src="https://github.com/DelMaestroGroup/papers-interactingBHZmodel/tree/main/plots_and_scripts/Phase_Diagram_Plot/Magnetic_phase_diagram_Nx4_BHZ.png" width="600px">
+<img src="https://github.com/DelMaestroGroup/papers-interactingBHZmodel/tree/main/plots_and_scripts/Phase_Diagram_Plot/Magnetic_phase_diagram_Nx4_BHZ.png" width="400px">
 
 
 #### Appendix Figure 1: Single Site Picture
