@@ -37,7 +37,7 @@ This will generate `dmrg` and `observe` executables. Run the dmrg executable fir
 ./observe -f input.inp '<gs|n?0|gs>' >>nl_0.dat
 ```
 
-This will provide the local charge density for orbital-0 with spin-up. Similarly, one can observe the charge density for spin-down by replacing n?0 with n?1. For spin-up and spin-dn charge density of orbital-1 do `observe n?2` and `n?3`.)
+This will provide the local charge density for orbital-0 with spin-up. Similarly, one can observe the charge density for spin-down by replacing `n?0` with `n?1`. For spin-up and spin-dn charge density of orbital-1 do `observe n?2` and `n?3`.)
 
 To generate input file, go to the 'input_files' folder and run the following command :  
   python Create_input_dmrg.py M_val
