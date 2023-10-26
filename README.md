@@ -37,13 +37,8 @@ This work was supported by the U. S. Department of Energy, Office of Science, Of
 
 ### Figures
 
-<object width="400" height="500" type="application/pdf" data="https://github.com/DelMaestroGroup/papers-interactingBHZmodel/blob/main/plots_and_scripts/Non-Interacting_Plots/Combine_plot_Em_and_ni_for_A0p3_B0p5_Nx4_at_U0.pdf?#zoom=85&scrollbar=0&toolbar=0&navpanes=0">
-    <p>Insert your error message here, if the PDF cannot be displayed.</p>
-</object>
-
-
 #### Figure 1: Topological Phase Transition at $U=0$
-<img src="https://github.com/DelMaestroGroup/papers-interactingBHZmodel/blob/main/plots_and_scripts/Non-Interacting_Plots/Combine_plot_Em_and_ni_for_A0p3_B0p5_Nx4_at_U0.pdf?raw=true" width="450px">
+<img src="https://github.com/DelMaestroGroup/papers-interactingBHZmodel/blob/main/plots_and_scripts/Non-Interacting_Plots/Combine_plot_Em_and_ni_for_A0p3_B0p5_Nx4_at_U0.png" width="450px">
 
 #### Figure 2: Magnetic Properties at $m=3.0$
 <img src="https://github.com/DelMaestroGroup/papers-interactingBHZmodel/blob/main/plots_and_scripts/Interaction_Plots/Combined_observe_plots_vs_U_for_4x4_System_at_A0p3_B0p5_m3p0.png" width="400px">
@@ -62,11 +57,19 @@ This work was supported by the U. S. Department of Energy, Office of Science, Of
 
 
 #### Figure 6: Topological and Magnetic phase diagram using DMRG
-<img src="https://github.com/DelMaestroGroup/papers-interactingBHZmodel/tree/main/plots_and_scripts/Phase_Diagram_Plot/Magnetic_phase_diagram_Nx4_BHZ.png" width="400px">
+<img src="https://github.com/DelMaestroGroup/papers-interactingBHZmodel/tree/main/plots_and_scripts/Phase_Diagram_Plot/Magnetic_phase_diagram_Nx4_BHZ.png" width="600px">
 
+#### Lattice Figure 1: Hopping Connections
+<img src="https://github.com/DelMaestroGroup/papers-interactingBHZmodel/blob/main/plots_and_scripts/Lattice_Plots/hopping_connection.png" width="400px">
+
+#### Lattice Figure 2: $6\times 4$ Geometry
+<img src="https://github.com/DelMaestroGroup/papers-interactingBHZmodel/blob/main/plots_and_scripts/Lattice_Plots/lattice_geometry_for_6x4.png" width="400px">
+
+#### Lattice Figure 3: Numbering and Bulk-Sites in $6\times 4$ Geometry 
+<img src="https://github.com/DelMaestroGroup/papers-interactingBHZmodel/blob/main/plots_and_scripts/Lattice_Plots/lattice_geometry_for_6x4_shaded_bulk.png" width="400px">
 
 #### Appendix Figure 1: Single Site Picture
-<img src="https://github.com/DelMaestroGroup/papers-interactingBHZmodel/blob/main/plots_and_scripts/Appendix_Plots/Single_site_eigens_vs_U.png" width="300px">
+<img src="https://github.com/DelMaestroGroup/papers-interactingBHZmodel/blob/main/plots_and_scripts/Appendix_Plots/Single_site_eigens_vs_U.png" width="400px">
 
 
 #### Appendix Figure 2: Finite Size Scaling-A
