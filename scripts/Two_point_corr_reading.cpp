@@ -323,6 +323,7 @@ int main (int argc, char** argv){
 	string file_ttz_full_out="Tzd_corr_vs_d_tot.txt";
 	ofstream file_tzitz0_full_out(file_ttz_full_out.c_str());
 
+
 	double Avg_n_orb0, Avg_n_orb1;
 	Avg_n_orb0 = 0.0;
 	Avg_n_orb1 = 0.0;
@@ -385,11 +386,11 @@ int main (int argc, char** argv){
 	avg_bulk_val0=0.0;
 	avg_bulk_val1=0.0;
 	if(Size>16){
-		for(int rx=2;rx<Lx_-2;rx++){
+		for(int rx=Lx_/2-1;rx<=Lx_/2;rx++){
 			for(int ry=0;ry<Ly_;ry++){
 				rd=ry+Ly_*rx;
-				avg_bulk_val0 += (1.0/(1.0*(Size-16)))*(n_0up[rd]+n_0dn[rd]);
-				avg_bulk_val1 += (1.0/(1.0*(Size-16)))*(n_1up[rd]+n_1dn[rd]);
+				avg_bulk_val0 += (1.0/8.0)*(n_0up[rd]+n_0dn[rd]);
+				avg_bulk_val1 += (1.0/8.0)*(n_1up[rd]+n_1dn[rd]);
 			}
 		}
 	}
@@ -429,16 +430,52 @@ int main (int argc, char** argv){
 	file_nAvg_out<<"Avg_occ_for_orb-0= "<<Avg_n_orb0<<endl;
 	file_nAvg_out<<"Avg_occ_for_orb-1= "<<Avg_n_orb1<<endl;
 
+	double Avg_Charge_Fluc0,Avg_Charge_Fluc1,Avg_doub_occ0,Avg_doub_occ1;
+	Avg_Charge_Fluc0=0.0;	Avg_Charge_Fluc1=0.0;
+	Avg_doub_occ0=0.0;	Avg_doub_occ1=0.0;
+	for(int i=0;i<Size;i++){
+		Avg_Charge_Fluc0 += (1.0/(1.0*Size))*( nn_00_mat[i][i].real() );
+		Avg_Charge_Fluc1 += (1.0/(1.0*Size))*( nn_11_mat[i][i].real() );
+
+		Avg_doub_occ0 += (1.0/(1.0*Size))*( nn_0up_0dn[i][i].real() );
+		Avg_doub_occ1 += (1.0/(1.0*Size))*( nn_1up_1dn[i][i].real() );
+	}
+
+	file_nAvg_out<<"Charge_fluctuations_for_orb-0= "<<Avg_Charge_Fluc0<<endl;
+	file_nAvg_out<<"Charge_fluctuations_for_orb-1= "<<Avg_Charge_Fluc1<<endl;
+
+	file_nAvg_out<<"Double_occupancy_for_orb-0= "<<Avg_doub_occ0<<endl;
+	file_nAvg_out<<"Double_occupancy_for_orb-1= "<<Avg_doub_occ1<<endl;
+
 	//--------------------------------------------------------------------------//
 	//Generating Spin-Spin correlations data files:------->
-	string file_SS_orb0_out="Sd_corr_vs_d_orb0.txt";
-	ofstream file_SiS0_orb0_out(file_SS_orb0_out.c_str());
+	string file_SS_orb0_out_="Sd_corr_vs_d_orb0.txt";
+	ofstream file_SS_orb0_out(file_SS_orb0_out_.c_str());
 
-	string file_SS_orb1_out="Sd_corr_vs_d_orb1.txt";
-	ofstream file_SiS0_orb1_out(file_SS_orb1_out.c_str());
+	string file_SS_orb1_out_="Sd_corr_vs_d_orb1.txt";
+	ofstream file_SS_orb1_out(file_SS_orb1_out_.c_str());
 
-	string file_SS_full_out="Sd_corr_vs_d_tot.txt";
-	ofstream file_SiS0_full_out(file_SS_full_out.c_str());
+	string file_SS_full_out_="Sd_corr_vs_d_tot.txt";
+	ofstream file_SS_full_out(file_SS_full_out_.c_str());
+
+
+	string file_S0Si_orb0_out_="S0Si_vs_i_orb0.txt";
+	ofstream file_S0Si_orb0_out(file_S0Si_orb0_out_.c_str());
+
+	string file_S0Si_orb1_out_="S0Si_vs_i_orb1.txt";
+	ofstream file_S0Si_orb1_out(file_S0Si_orb1_out_.c_str());
+
+	string file_S0Si_full_out_="S0Si_vs_i_tot.txt";
+	ofstream file_S0Si_full_out(file_S0Si_full_out_.c_str());
+
+	int bulk_site=4;
+	for(int i=bulk_site;i<Size;i++){
+		file_S0Si_orb0_out<<i-bulk_site<<"	"<<SS_orb0_mat[bulk_site][i].real()<<endl;
+		file_S0Si_orb1_out<<i-bulk_site<<"	"<<SS_orb1_mat[bulk_site][i].real()<<endl;
+		file_S0Si_full_out<<i-bulk_site<<"	"<<SS_tot_mat[bulk_site][i].real()<<endl;
+	}
+
+
 
 	complex<double> SS_orb0_val,SS_orb1_val,SS_tot_val;
 	for(int d=0;d<=max_dist;d++){
@@ -452,9 +489,9 @@ int main (int argc, char** argv){
 				}
 			}
 		}
-		file_SiS0_orb0_out<<d<<"	"<<SS_orb0_val.real()<<endl;
-		file_SiS0_orb1_out<<d<<"	"<<SS_orb1_val.real()<<endl;
-		file_SiS0_full_out<<d<<"	"<<SS_tot_val.real()<<endl;
+		file_SS_orb0_out<<d<<"	"<<SS_orb0_val.real()<<endl;
+		file_SS_orb1_out<<d<<"	"<<SS_orb1_val.real()<<endl;
+		file_SS_full_out<<d<<"	"<<SS_tot_val.real()<<endl;
 	}
 
 	complex<double> S2_orb0, S2_orb1, S2_tot, Local_S2_Avg_orb0, Local_S2_Avg_orb1, Local_S2_Avg_tot;

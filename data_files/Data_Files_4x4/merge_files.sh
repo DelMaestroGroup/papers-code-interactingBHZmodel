@@ -10,7 +10,7 @@ do
 		mv ${obs}_observes_m${m_val}_copy.txt ${obs}_observes_m${m_val}.txt
 	done
 
-	for m_val in 4.25 3.75 1.0 0.0
+	for m_val in 0.0 1.0 1.25 3.75 4.25
 	do
 		cat LGY_Data/${obs}_observes_m${m_val}.txt NG_Data/${obs}_observes_m${m_val}.txt >>${obs}_observes_m${m_val}.txt
 		sort -k1 -n ${obs}_observes_m${m_val}.txt >>${obs}_observes_m${m_val}_copy.txt
@@ -31,5 +31,9 @@ do
         cp NG_Data/*observes_m${m_val}.txt .
 done
 
-#Copying observable files from LGY data
-#cp LGY_Data/*observes_m3.75.txt .
+#Copying charge fluctuations files from NG and LGY cluster data
+for obs in
+do
+
+done
+

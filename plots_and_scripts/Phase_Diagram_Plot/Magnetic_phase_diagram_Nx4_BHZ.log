@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.7.11)  12 OCT 2023 12:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.7.11)  24 OCT 2023 19:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -196,12 +196,12 @@ e
 \gptboxtext=\box47
 Package epstopdf Info: Source file: <Magnetic_phase_diagram_Nx4_BHZ_new-inc.eps
 >
-(epstopdf)                    date: 2023-10-12 12:08:29
-(epstopdf)                    size: 205803 bytes
+(epstopdf)                    date: 2023-10-24 19:23:24
+(epstopdf)                    size: 216566 bytes
 (epstopdf)             Output file: <Magnetic_phase_diagram_Nx4_BHZ_new-inc-eps
 -converted-to.pdf>
-(epstopdf)                    date: 2023-09-27 22:21:37
-(epstopdf)                    size: 174522 bytes
+(epstopdf)                    date: 2023-10-12 12:09:08
+(epstopdf)                    size: 201651 bytes
 (epstopdf)             Command: <repstopdf --outfile=Magnetic_phase_diagram_Nx4
 _BHZ_new-inc-eps-converted-to.pdf Magnetic_phase_diagram_Nx4_BHZ_new-inc.eps>
 (epstopdf)             \includegraphics on input line 171.
@@ -211,8 +211,8 @@ ed).
 
 Package epstopdf Info: Result file: <Magnetic_phase_diagram_Nx4_BHZ_new-inc-eps
 -converted-to.pdf>
-(epstopdf)                    date: 2023-10-12 12:09:08
-(epstopdf)                    size: 201651 bytes.
+(epstopdf)                    date: 2023-10-24 19:24:01
+(epstopdf)                    size: 207577 bytes.
 <Magnetic_phase_diagram_Nx4_BHZ_new-inc-eps-converted-to.pdf, id=1, 252.945pt x
  252.945pt>
 File: Magnetic_phase_diagram_Nx4_BHZ_new-inc-eps-converted-to.pdf Graphic file 
@@ -269,7 +269,7 @@ r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on Magnetic_phase_diagram_Nx4_BHZ.pdf (1 page, 249378 bytes).
+Output written on Magnetic_phase_diagram_Nx4_BHZ.pdf (1 page, 255309 bytes).
 PDF statistics:
  36 PDF objects out of 1000 (max. 8388607)
  24 compressed objects within 1 object stream
