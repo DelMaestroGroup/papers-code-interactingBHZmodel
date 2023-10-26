@@ -13,22 +13,31 @@ This repository includes data files, scripts, codes and analysis used to generat
 The data in this project is generated using two different methods:
 1. The data for the interacting BHZ model was generated via DMRG++ software developed by Dr. Gonzalo Alvarez. Here we provide detailed instructions on how to reproduce the DMRG results used in the main text. The results reported in this work were obtained with the DMRG++ version 6.05 and PsimagLite version 3.04. The documentation for the same is provided [here](https://github.com/g1257/dmrgpp), for compilation follow the steps below:
 * Dependencies include the [BOOST](https://www.boost.org/), [HDF5](https://docs.hdfgroup.org/archive/support/HDF5/doc1.8/cpplus_RM/index.html) and [OpenBLAS](https://www.openblas.net/) libraries
-* git clone https://code.ornl.gov/gonzalo_3/PsimagLite.git
-* cd PsimagLite/lib
-* perl configure.pl
-* make
-* cd ../../
-* git clone https://code.ornl.gov/gonzalo_3/dmrgpp.git
-* cd dmrgpp/src
-* perl configure.pl
-* make
-This will generate 'dmrg' and 'observe' executables. Run the dmrg executable first to save the ground state and then use the observe executable to evaluate all the necessary observables. See the steps below:
-* ./dmrg -f input.inp
-* ./observe -f input.inp ss,nn >> ss_nn.dat (this will provide all the spin-spin and charge-charge corrlations)
-* ./observe -f input.inp '<gs|n?0|gs>' >>nl_0.dat (this will provide the local charge density for orbital-0 with spin-up. Similarly, one can observe the charge density for spin-down by replacing n?0 with n?1. For spin-up and spin-dn charge density of orbital-1 do observe n?2 and n?3.)
 
-To generate input file, go to the 'input_files' folder and run the following command : 
-* python Create_input_dmrg.py M_val
+```bash
+git clone https://code.ornl.gov/gonzalo_3/PsimagLite.git
+cd PsimagLite/lib
+perl configure.pl
+make
+cd ../../
+git clone https://code.ornl.gov/gonzalo_3/dmrgpp.git
+cd dmrgpp/src
+perl configure.pl
+make
+```
+
+This will generate `dmrg` and `observe` executables. Run the dmrg executable first to save the ground state and then use the observe executable to evaluate all the necessary observables. See the steps below:
+
+```bash
+./dmrg -f input.inp
+./observe -f input.inp ss,nn >> ss_nn.dat (this will provide all the spin-spin and charge-charge corrlations)
+./observe -f input.inp '<gs|n?0|gs>' >>nl_0.dat
+```
+
+This will provide the local charge density for orbital-0 with spin-up. Similarly, one can observe the charge density for spin-down by replacing n?0 with n?1. For spin-up and spin-dn charge density of orbital-1 do `observe n?2` and `n?3`.)
+
+To generate input file, go to the 'input_files' folder and run the following command :  
+  python Create_input_dmrg.py M_val
 
 2. The data for the non-interacting BHZ model was generated via exact diagonalization. The code can be found [here](https://github.com/DelMaestroGroup/Exact_Diagonalization_BHZ). Detail instructions are provided in this repo regarding compilations, executions and more. 
 
