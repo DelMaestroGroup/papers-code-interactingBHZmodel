@@ -30,7 +30,7 @@ This will generate 'dmrg' and 'observe' executables. Run the dmrg executable fir
 To generate input file, go to the input_files folder and run the following command : 
 * python Create_input_dmrg.py M_val
 
-2. The data for the non-interacting BHZ model was generated via exact diagonalization. The details of this code is provided in the "ED-code" folder of this repository.
+2. The data for the non-interacting BHZ model was generated via exact diagonalization. The code can be found [here](https://github.com/DelMaestroGroup/Exact_Diagonalization_BHZ). Detail instructions are provided in this repo regarding compilations, executions and more. 
 
 ### Support
 This work was supported by the U. S. Department of Energy, Office of Science, Office of Basic Energy Sciences,under Award No. DE-SC0022311.
