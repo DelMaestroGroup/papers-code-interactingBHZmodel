@@ -1,3 +1,4 @@
+[![Paper](https://img.shields.io/badge/paper-arXiv%3A2310.17614-B31B1B.svg)](https://arxiv.org/abs/2310.17614)
 [![DOI](https://zenodo.org/badge/671278961.svg)](https://zenodo.org/doi/10.5281/zenodo.10044785)
 
 # Topological and magnetic properties of the interacting Bernevig-Hughes-Zhang model
