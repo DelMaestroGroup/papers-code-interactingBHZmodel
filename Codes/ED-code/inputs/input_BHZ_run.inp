@@ -1,0 +1,27 @@
+#Use this file as an input for the BHZ model
+#Do not put space before or after the 'equal to' sign
+
+PBC_X=False
+PBC_Y=True
+
+Cells_X=XCELL_IN
+Cells_Y=YCELL_IN
+
+Total_Orbs=2
+Filling=FILL_IN
+Temperature=0.0001
+
+Orbital_Mixing_A=A_VAL_IN
+Intra_Orbital_Parameter_B=B_VAL_IN
+Gap_Parameter_M=M_VAL_IN
+
+#For smooth edge along X --->
+Smoothness_Width=WX_IN
+Confining_Potential_Vo=Vo_VAL_IN
+
+#For A(k,w) calculation --->
+Min_w=-5.0
+Max_w=5.0
+
+Width_dw=0.01
+Broadening_eta=0.005
